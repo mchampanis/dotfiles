@@ -82,4 +82,5 @@ Nothing to do.
 - vim colors?
 - ctrlp setup
 - https://github.com/jeetsukumaran/vim-buffergator
+- git stuff
 
