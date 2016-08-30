@@ -1,0 +1,59 @@
+execute pathogen#infect()
+
+" let mapleader = ","
+" nmap <Leader>n :NERDTreeToggle<CR>
+
+"General settings {
+    filetype plugin indent on       " Enable filetype detection
+    set number                      " Display line numbers
+    syntax on                       " Enable syntax highlighting
+    set background=dark             " Use the dark solarized theme
+    " let g:solarized_termtrans=1     " Fixes an issue with iTerm2 Solarized theme and background
+    " colorscheme solarized           " Use the solarized color scheme from .vim/colors/
+    colorscheme slate
+    set showmatch                   " Show the matching part of the pair for [] {} or ()
+    set ruler                       " Show the ruler at the bottom
+    let g:netrw_liststyle=3         " Use file tree appearance in explorer mode
+    set undofile                    " Persist undo/redo after exiting VIM
+    set undodir=~/.vim/vimundo/     " Don't scatter undo files all over the place
+    set nocompatible
+    set laststatus=2                " Always show the status line (file name, current mode, etc)
+    set backspace=indent,eol,start
+    set tabstop=4
+    set shiftwidth=4
+    set smarttab
+    set softtabstop=4
+    set expandtab
+    set mouse-=a
+    set shell=bash
+"}
+
+"Paste {
+    nnoremap <F2> :set invpaste paste?<CR>
+    set pastetoggle=<F2>
+    set showmode
+"}"
+
+"Split settings {
+    set splitbelow                  " Create the new split below, instead of VIM's default
+    set splitright                  " Create the new vertical split to the right, instead of VIM's default
+"}
+
+if has("autocmd")
+    " Use actual tab chars specifically in Makefiles
+    autocmd FileType make set tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
+endif
+
+"ctrlp settings {
+    let g:ctrlp_custom_ignore = {
+        \ 'dir':  '\.git$\|\.hg$\|\.svn$\|italent\/html$\|clickthrough$',
+        \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$\|\.orig$\|\.BACKUP\.\|\.BASE\.\|\.LOCAL\.\|\.REMOTE\.\|\.un\~$\|\.swp$',
+        \ }
+"}
+
+"nerdtree settings{
+    map <C-n> :NERDTreeToggle<CR>
+    let NERDTreeIgnore = ['\.pyc$']
+"}
+
+let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
