@@ -2,10 +2,18 @@
 
 ## Installation
 
-
 ###Packages###
+
+- Linux:
+
 ```
 apt-get install vim tmux screen ack-grep bash bash-completion
+```
+
+- macOS:
+
+```
+port install vim tmux tmux-pasteboard screen ack bash bash-completion
 ```
 
 ###Vim###
