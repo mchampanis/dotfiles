@@ -1,4 +1,5 @@
 --ignore-ack-defaults
+--ignore-directory=is:.vscode
 --ignore-directory=is:dist
 --ignore-directory=is:node_modules
 --ignore-directory=is:.bzr

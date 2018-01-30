@@ -80,15 +80,3 @@ Nothing to do.
 
 Nothing to do.
 
-
-##TODO##
-
-- bash configs
-- bash completion
-- install script
-- os x instructions
-- vim colors?
-- ctrlp setup
-- https://github.com/jeetsukumaran/vim-buffergator
-- git stuff
-
