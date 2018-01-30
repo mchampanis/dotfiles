@@ -2,7 +2,7 @@
 
 ## Installation
 
-###Packages###
+### Packages ###
 
 - Linux:
 
@@ -16,7 +16,7 @@ apt-get install vim tmux screen ack-grep bash bash-completion
 port install vim tmux tmux-pasteboard screen ack bash bash-completion
 ```
 
-###Vim###
+### Vim ###
 
 ```
 mkdir -p ~/.vim/vimundo
@@ -52,7 +52,7 @@ cd ~/.vim/bundle && \
 git clone https://github.com/ctrlpvim/ctrlp.vim.git ctrlp.vim
 ```
 
-###tmux###
+### tmux ###
 
 [tmux plugin manager](https://github.com/tmux-plugins/tpm)
 ```
@@ -72,11 +72,11 @@ run '~/.tmux/plugins/tpm/tpm'
 - Press prefix + I (capital I, as in Install) to fetch the plugin.
 
 
-###screen###
+### screen ###
 
 Nothing to do.
 
-###ack-grep###
+### ack-grep ###
 
 Nothing to do.
 
