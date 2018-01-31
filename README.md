@@ -59,18 +59,8 @@ git clone https://github.com/ctrlpvim/ctrlp.vim.git ctrlp.vim
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-Add the following to the bottom of `.tmux.conf`:
-```
-# list of plugins
-set -g @plugin 'tmux-plugins/tpm'
-
-# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
-run '~/.tmux/plugins/tpm/tpm'
-```
-
-- Add new plugin to `~/.tmux.conf` with `set -g @plugin '...'`
 - Press prefix + I (capital I, as in Install) to fetch the plugin.
-
+- Add new plugin to `~/.tmux.conf` with `set -g @plugin '...'`
 
 ### screen ###
 
