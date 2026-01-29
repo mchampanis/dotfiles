@@ -28,10 +28,16 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 ```
 
+[sensible.vim](https://github.com/tpope/vim-sensible)
+```
+cd ~/.vim/bundle && \
+git clone --depth=1 https://tpope.io/vim/sensible.git
+```
+
 [NERDTree](https://github.com/scrooloose/nerdtree)
 ```
 cd ~/.vim/bundle && \
-git clone https://github.com/scrooloose/nerdtree.git
+git clone --depth=1 https://github.com/scrooloose/nerdtree.git
 ```
 
 [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
@@ -43,13 +49,13 @@ wget https://github.com/Xuyuanp/nerdtree-git-plugin/raw/master/nerdtree_plugin/g
 [pydiction](http://rkulla.github.io/pydiction/)
 ```
 cd ~/.vim/bundle && \
-git clone https://github.com/rkulla/pydiction.git
+git clone --depth=1 https://github.com/rkulla/pydiction.git
 ```
 
 [ctrpl](https://github.com/ctrlpvim/ctrlp.vim)
 ```
 cd ~/.vim/bundle && \
-git clone https://github.com/ctrlpvim/ctrlp.vim.git ctrlp.vim
+git clone --depth=1 https://github.com/ctrlpvim/ctrlp.vim.git
 ```
 
 ### tmux ###
@@ -64,9 +70,8 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ### screen ###
 
-Nothing to do.
+todo
 
 ### ack-grep ###
 
-Nothing to do.
-
+`cp ack/ackrc ~/.ackrc`
