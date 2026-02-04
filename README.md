@@ -34,6 +34,12 @@ cd ~/.vim/bundle && \
 git clone --depth=1 https://tpope.io/vim/sensible.git
 ```
 
+[vim-bbye](https://github.com/moll/vim-bbye)
+```
+cd ~/.vim/bundle && \
+git clone --depth=1 https://github.com/moll/vim-bbye.git bbye
+```
+
 [NERDTree](https://github.com/scrooloose/nerdtree)
 ```
 cd ~/.vim/bundle && \

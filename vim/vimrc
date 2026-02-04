@@ -1,9 +1,15 @@
+set runtimepath^=~/.config/vim
+set runtimepath+=~/.config/vim/after
+
 execute pathogen#infect()
 
 let mapleader = ","
 
 nmap <Leader>n :NERDTreeToggle<CR>
 
+nnoremap <Leader>q :Bdelete<CR>
+nnoremap <Leader><Tab> :bnext<CR>
+" nnoremap <Leader><S-Tab> :bprev<CR>
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 nnoremap <Leader>wn :match ExtraWhitespace /\s\+$/<CR>
 nnoremap <Leader>wf :match<CR>
@@ -15,11 +21,14 @@ nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
 nmap <c-n> :set invnumber<CR>
+
 map <F3>:set invhls hls?<CR>
 imap <F3> <Esc>:set invhls hls?<CR>i
+
 map  <F6> :r !date<CR>
 imap <F6> <Esc>:r !date<CR>i
-map s :source $HOME/.vimrc<CR>
+
+map s :source $HOME/.config/vim/vimrc<CR>
 
 "General settings {
     filetype plugin indent on       " Enable filetype detection
@@ -66,7 +75,7 @@ if has("autocmd")
 
     autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
     autocmd BufEnter * let &titlestring = $HOSTNAME . ":" . expand("%:p:~")
-    
+
     function! IncSearch()
       if line2byte(line("$")) < 10000000
         set incsearch
@@ -89,14 +98,14 @@ endif
 
 "ctrlp settings {
     set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-    
+
     let g:ctrlp_custom_ignore = {
         \ 'dir':  '\.git$\|\.hg$\|\.svn$\|italent\/html$\|clickthrough$',
         \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$\|\.orig$\|\.BACKUP\.\|\.BASE\.\|\.LOCAL\.\|\.REMOTE\.\|\.un\~$\|\.swp$',
         \ }
 
     let g:ctrlp_map = '<c-p>'
-    let g:ctrlp_cmd = 'CtrlP'    
+    let g:ctrlp_cmd = 'CtrlP'
 "}
 
 "nerdtree settings{
@@ -105,9 +114,12 @@ endif
 
 "minibuf settings{
     let g:miniBufExplMapWindowNavVim = 1
+    let g:miniBufExplUseSingleClick = 1
     let g:miniBufExplMapWindowNavArrows = 1
-    let g:miniBufExplMapCTabSwitchBufs = 1
-    let g:miniBufExplModSelTarget = 1 
+    let g:miniBufExplMapCTabSwitchBufs = 0
+    let g:miniBufExplModSelTarget = 1
+    let g:miniBufExplMaxSize = 1
+    let g:miniBufExplTabWrap = 1
 "}
 
 " " Paste mode on/off
@@ -123,8 +135,7 @@ endif
 "   else
 "     set nopaste
 "     let g:paste_mode = 0
-"   endif  
+"   endif
 " return
-" endfunc 
+" endfunc
 " end
-
